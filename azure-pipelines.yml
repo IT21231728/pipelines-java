@@ -23,3 +23,9 @@ jobs:
       targetPath: '$(Build.ArtifactStagingDirectory)'
       artifactName: 'drop'
       publishLocation: 'Pipeline'
+      
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: '$(Pipeline.Workspace)'
+      artifact: 'drop'
+      publishLocation: 'pipeline'
